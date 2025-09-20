@@ -1,0 +1,30 @@
+{
+  "name": "expat-tax-platform",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "dev": "concurrently \"npm run dev --workspace apps/web\" \"npm run dev --workspace apps/api\"",
+    "lint": "npm run lint --workspaces",
+    "test": "npm run test --workspaces",
+    "typecheck": "npm run typecheck --workspaces",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "ts-node --project tsconfig.json scripts/seed.ts",
+    "pdf:samples": "ts-node --project tsconfig.json scripts/generate-samples.ts"
+  },
+  "devDependencies": {
+    "concurrently": "8.2.2",
+    "prisma": "5.12.1",
+    "ts-node": "10.9.2",
+    "typescript": "5.4.3"
+  },
+  "dependencies": {
+    "@prisma/client": "5.12.1",
+    "@expat/tax-engine": "workspace:*"
+  }
+}

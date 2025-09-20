@@ -1,0 +1,121 @@
+{
+  "landing": {
+    "title": "해외 거주자를 위한 미국 세금 신고 안내",
+    "subtitle": "해외 거주 미국인과 비거주 외국인을 위한 단계별 인터뷰.",
+    "getStarted": "신고 시작하기",
+    "viewDocs": "문서 보기",
+    "disclaimer": "본 서비스는 세무/법률 자문을 제공하지 않습니다. 신고 전 전문가와 상담하세요.",
+    "wizardPreview": "진행 과정 미리보기",
+    "wizardDescription": "거주자 판정부터 외국소득 제외/세액공제까지 안내하고 PDF 결과물을 제공합니다."
+  },
+  "wizard": {
+    "welcome": {
+      "title": "엑스팻 세금 도우미에 오신 것을 환영합니다",
+      "description": "몇 가지 질문에 답하면 적절한 신고 경로를 안내드립니다.",
+      "bullets": {
+        "guidedFlow": "엑스팻 특화 단계별 안내",
+        "koreaFocus": "한국 거주자를 위한 맞춤 설명",
+        "disclaimer": "전문가 자문을 대체하지 않습니다"
+      },
+      "start": "거주자 판정 시작"
+    },
+    "residency": {
+      "title": "거주자 판정",
+      "description": "실질적 체류일수, 영주권 여부, 해외 근로소득 제외 요건을 평가합니다.",
+      "fields": {
+        "taxYear": "과세연도",
+        "daysInUS": "미국 체류 일수",
+        "hasGreenCard": "올해 영주권을 보유했나요?",
+        "visaStatus": "현재 비자/신분",
+        "physicalPresenceDaysAbroad": "해외 체류 일수",
+        "bonaFideResidence": "실질적 거주 요건 충족"
+      },
+      "submitting": "판정 중...",
+      "continue": "저장 후 계속",
+      "result": {
+        "title": "판정 결과",
+        "residencyStatus": "상태: {status}",
+        "recommendedForm": "권장 양식: Form {form}"
+      }
+    },
+    "personal": {
+      "title": "개인 정보",
+      "description": "민감 정보는 암호화되어 저장됩니다.",
+      "fields": {
+        "firstName": "이름",
+        "lastName": "성",
+        "ssn": "SSN/ITIN",
+        "filingStatus": "신고 상태",
+        "dependents": "부양가족 수"
+      },
+      "filingStatuses": {
+        "single": "단독",
+        "mfj": "부부 공동",
+        "mfs": "부부 별도",
+        "hoh": "세대주"
+      },
+      "back": "이전",
+      "continue": "다음"
+    },
+    "income": {
+      "wages": {
+        "title": "미국 소득 (W-2, 1042-S)",
+        "description": "각 고용주별 금액과 통화를 입력하세요.",
+        "employer": "고용주",
+        "amount": "금액",
+        "currency": "통화"
+      },
+      "foreignWages": {
+        "title": "해외 근로소득",
+        "description": "환전 전 금액을 입력하세요.",
+        "country": "국가",
+        "amount": "금액",
+        "currency": "통화"
+      },
+      "business": {
+        "title": "자영업 소득",
+        "description": "허용 경비 차감 후 순이익"
+      },
+      "addW2": "W-2/1042-S 추가",
+      "addForeignWage": "해외 소득 추가",
+      "back": "이전",
+      "continue": "다음"
+    },
+    "foreign": {
+      "title": "해외 근로소득 제외",
+      "description": "2555 양식 요건을 검사하고 제외액을 계산합니다.",
+      "fields": {
+        "country": "거주 국가",
+        "taxHome": "세무상 주소",
+        "foreignEarnedIncome": "해외 근로소득 (USD 환산)",
+        "housingCosts": "주거비 (USD)",
+        "qualifiesPhysicalPresence": "물리적 거주 요건 충족",
+        "qualifiesBonaFide": "실질적 거주 요건 충족"
+      },
+      "back": "이전",
+      "continue": "다음",
+      "calculating": "계산 중...",
+      "result": {
+        "title": "계산 결과",
+        "maximumExclusion": "최대 제외액: ${amount}",
+        "housingExclusion": "주거비 제외: ${amount}",
+        "qualifies": "적격 여부: {qualifies}"
+      }
+    },
+    "review": {
+      "title": "검토 및 제출",
+      "description": "입력값과 계산표를 모아 요약합니다.",
+      "disclaimer": "제출 전 전문가 확인을 권장합니다.",
+      "loading": "요약 계산 중...",
+      "summary": {
+        "title": "요약",
+        "agi": "조정 총소득",
+        "taxableIncome": "과세소득",
+        "taxLiability": "총 세액",
+        "credits": "세액공제",
+        "refund": "환급 예상액",
+        "balanceDue": "납부 예상액"
+      }
+    }
+  }
+}

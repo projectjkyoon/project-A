@@ -1,0 +1,20 @@
+{
+  "country": "Korea",
+  "articles": [
+    {
+      "article": "Article 12",
+      "title": "Royalties",
+      "summary": "5% withholding rate on royalties paid to Korean residents."
+    },
+    {
+      "article": "Article 14",
+      "title": "Independent Personal Services",
+      "summary": "Income taxable only in state of residence absent fixed base in the US."
+    },
+    {
+      "article": "Article 11",
+      "title": "Interest",
+      "summary": "Interest exempt from US tax when beneficial owner is Korean resident meeting treaty criteria."
+    }
+  ]
+}
