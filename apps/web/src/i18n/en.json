@@ -1,0 +1,121 @@
+{
+  "landing": {
+    "title": "Cross-border US tax filing made approachable",
+    "subtitle": "Guided flows for Americans abroad and nonresident aliens with US income.",
+    "getStarted": "Start your return",
+    "viewDocs": "Read the documentation",
+    "disclaimer": "This product does not provide legal or tax advice. Review all filings with a qualified professional.",
+    "wizardPreview": "What the process looks like",
+    "wizardDescription": "We walk through residency, income, foreign exclusions/credits, and deliver filing-ready PDFs."
+  },
+  "wizard": {
+    "welcome": {
+      "title": "Welcome to the expat tax assistant",
+      "description": "Answer a few questions and we will guide you to the right forms.",
+      "bullets": {
+        "guidedFlow": "TurboTax-style wizard focused on expat complexities",
+        "koreaFocus": "Localized guidance for Korea with extendable treaty modules",
+        "disclaimer": "Not a substitute for professional advice"
+      },
+      "start": "Begin residency check"
+    },
+    "residency": {
+      "title": "Residency determination",
+      "description": "We evaluate Substantial Presence, green card, and FEIE tests.",
+      "fields": {
+        "taxYear": "Tax year",
+        "daysInUS": "Days present in the US",
+        "hasGreenCard": "Have you held a US green card this year?",
+        "visaStatus": "Current visa or status",
+        "physicalPresenceDaysAbroad": "Days abroad in tax year",
+        "bonaFideResidence": "Do you meet the bona fide residence test?"
+      },
+      "submitting": "Determining...",
+      "continue": "Save and continue",
+      "result": {
+        "title": "Residency determination",
+        "residencyStatus": "Status: {status}",
+        "recommendedForm": "Recommended filing: Form {form}"
+      }
+    },
+    "personal": {
+      "title": "Personal details",
+      "description": "We keep PII encrypted and only store what is necessary for filing.",
+      "fields": {
+        "firstName": "First name",
+        "lastName": "Last name",
+        "ssn": "SSN/ITIN",
+        "filingStatus": "Filing status",
+        "dependents": "Number of dependents"
+      },
+      "filingStatuses": {
+        "single": "Single",
+        "mfj": "Married filing jointly",
+        "mfs": "Married filing separately",
+        "hoh": "Head of household"
+      },
+      "back": "Back",
+      "continue": "Continue"
+    },
+    "income": {
+      "wages": {
+        "title": "US wages (W-2, 1042-S)",
+        "description": "Enter each employer with currency received.",
+        "employer": "Employer name",
+        "amount": "Amount",
+        "currency": "Currency"
+      },
+      "foreignWages": {
+        "title": "Foreign wages",
+        "description": "Income earned abroad before conversion.",
+        "country": "Country",
+        "amount": "Amount",
+        "currency": "Currency"
+      },
+      "business": {
+        "title": "Self-employment",
+        "description": "Net profit after allowable expenses."
+      },
+      "addW2": "Add another W-2/1042-S",
+      "addForeignWage": "Add another foreign wage",
+      "back": "Back",
+      "continue": "Continue"
+    },
+    "foreign": {
+      "title": "Foreign earned income exclusion",
+      "description": "We apply Form 2555 tests and compute the FEIE + housing exclusion.",
+      "fields": {
+        "country": "Country of residence",
+        "taxHome": "Tax home",
+        "foreignEarnedIncome": "Foreign earned income (local currency amount converted to USD)",
+        "housingCosts": "Qualified housing costs (USD)",
+        "qualifiesPhysicalPresence": "Meets physical presence test",
+        "qualifiesBonaFide": "Meets bona fide residence test"
+      },
+      "back": "Back",
+      "continue": "Continue",
+      "calculating": "Calculating...",
+      "result": {
+        "title": "FEIE result",
+        "maximumExclusion": "Maximum exclusion: ${amount}",
+        "housingExclusion": "Housing exclusion: ${amount}",
+        "qualifies": "Qualifies: {qualifies}"
+      }
+    },
+    "review": {
+      "title": "Review and file",
+      "description": "We combine your inputs and computed worksheets.",
+      "disclaimer": "Review all outputs and consult a tax advisor before filing.",
+      "loading": "Computing your summary...",
+      "summary": {
+        "title": "Return summary",
+        "agi": "Adjusted gross income",
+        "taxableIncome": "Taxable income",
+        "taxLiability": "Total tax",
+        "credits": "Credits",
+        "refund": "Estimated refund",
+        "balanceDue": "Estimated balance due"
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+[
+  { "currency": "USD", "usdRate": 1 },
+  { "currency": "KRW", "usdRate": 1298.0 },
+  { "currency": "EUR", "usdRate": 0.94 }
+]

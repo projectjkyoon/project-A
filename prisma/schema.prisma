@@ -1,0 +1,116 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../node_modules/.prisma/client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                 String   @id @default(cuid())
+  email              String   @unique
+  name               String?
+  locale             String   @default("en")
+  countryOfResidence String?
+  role               String   @default("user")
+  returns            Return[]
+}
+
+model Return {
+  id              String   @id @default(cuid())
+  userId          String
+  taxYear         Int
+  residencyStatus String
+  filingStatus    String
+  country         String
+  state           String?
+  status          String   @default("draft")
+  user            User     @relation(fields: [userId], references: [id])
+  incomeW2        IncomeW2[]
+  income1099      Income1099[]
+  incomeForeign   IncomeForeignWage[]
+  incomeBusiness  IncomeBusiness[]
+  incomePassive   IncomePassive[]
+  foreignTaxes    ForeignTaxPaid[]
+  presenceDays    PresenceDay[]
+  computations    Computation[]
+}
+
+model IncomeW2 {
+  id        String  @id @default(cuid())
+  returnId  String
+  employer  String
+  wagesUSD  Float
+  wagesLocal Float?
+  currency  String?
+  return    Return  @relation(fields: [returnId], references: [id])
+}
+
+model Income1099 {
+  id        String  @id @default(cuid())
+  returnId  String
+  payer     String
+  amountUSD Float
+  type      String
+  currency  String?
+  return    Return  @relation(fields: [returnId], references: [id])
+}
+
+model IncomeForeignWage {
+  id        String  @id @default(cuid())
+  returnId  String
+  employer  String
+  amountUSD Float
+  amountLocal Float?
+  currency  String?
+  return    Return  @relation(fields: [returnId], references: [id])
+}
+
+model IncomeBusiness {
+  id        String  @id @default(cuid())
+  returnId  String
+  name      String
+  netProfit Float
+  currency  String?
+  return    Return  @relation(fields: [returnId], references: [id])
+}
+
+model IncomePassive {
+  id        String  @id @default(cuid())
+  returnId  String
+  description String
+  amountUSD Float
+  currency  String?
+  return    Return  @relation(fields: [returnId], references: [id])
+}
+
+model ForeignTaxPaid {
+  id        String   @id @default(cuid())
+  returnId  String
+  country   String
+  basket    String
+  amountLocal Float
+  amountUSD Float
+  taxYear   Int
+  return    Return   @relation(fields: [returnId], references: [id])
+}
+
+model PresenceDay {
+  id        String @id @default(cuid())
+  returnId  String
+  date      DateTime
+  locationCountry String
+  return    Return @relation(fields: [returnId], references: [id])
+}
+
+model Computation {
+  id         String   @id @default(cuid())
+  returnId   String
+  module     String
+  payloadJSON Json
+  resultJSON  Json
+  createdAt  DateTime @default(now())
+  return     Return   @relation(fields: [returnId], references: [id])
+}
